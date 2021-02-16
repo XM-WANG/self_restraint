@@ -26,9 +26,9 @@ if __name__ == "__main__":
     if not os.path.exists(temp_folder_path):
         os.makedirs(temp_folder_path)
     # check model.py
-    model_file_path = os.path.join(args.path,"model.py")
+    model_file_path = os.path.join(args.path,"models.py")
     if not os.path.exists(model_file_path):
-        os.system(f"cp {os.path.join('demo','model.py')} {model_file_path}")
+        os.system(f"cp {os.path.join('demo','models.py')} {model_file_path}")
     # check train.py
     train_file_path = os.path.join(args.path,"train.py")
     if not os.path.exists(train_file_path):
