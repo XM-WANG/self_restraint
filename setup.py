@@ -37,3 +37,6 @@ if __name__ == "__main__":
     utils_file_path = os.path.join(args.path,"utils.py")
     if not os.path.exists(utils_file_path):
         os.system(f"cp {os.path.join('demo','utils.py')} {utils_file_path}")
+
+    print(f"Directory has been developed in {args.path}")
+    print(os.system(f"tree {args.path}"))
