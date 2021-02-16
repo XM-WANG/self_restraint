@@ -32,3 +32,9 @@ Project should follow the dirctory structure below:
   - `temp`: The place to save intermediate result, or some testing code.
 
 ## Quick Develop
+
+Suppose that you want to develop such directory in the `../test` folder, set parameter `-p` as `../test`.
+
+```
+python setup.py -p=../test
+```
