@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # check scripts folder
     scripts_folder_path = os.path.join(args.path,"scripts")
     if not os.path.exists(scripts_folder_path):
-        os.system(f"cp -r scripts {args.path}")
+        os.system(f"cp -r {os.path.join('demo','scripts')} {args.path}")
     # check temp folder
     temp_folder_path = os.path.join(args.path,"temp")
     if not os.path.exists(temp_folder_path):
