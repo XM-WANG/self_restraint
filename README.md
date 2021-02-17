@@ -31,6 +31,8 @@ Project should follow the dirctory structure below:
   - `scripts`: The place to save scrips. (e.g. hyper-parameters searching scripts.)
   - `temp`: The place to save intermediate result, or some testing code.
 
+Folder `demo` in this repo is a demonstration of the structure mentioned above. 
+
 ## Quick Develop
 
 Suppose that you want to develop such directory in the `../test` folder, set parameter `-p` as `../test`.
