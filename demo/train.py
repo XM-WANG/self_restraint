@@ -39,7 +39,7 @@ def test(model,testloader,device):
     return correct/total
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-lr', '--learning_rate', type=np.float64, default=1e-4)
+parser.add_argument('-lr', '--learning_rate', type=float, default=1e-4)
 parser.add_argument('-ep', '--max_epoch', type=int, default=10)
 parser.add_argument('-wd','--weight_decay', type=float, default=5e-5)
 parser.add_argument('-pt','--pretrained', type=bool, default=True)
