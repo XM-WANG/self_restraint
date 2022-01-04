@@ -2,27 +2,27 @@
 
 Tensor related cheat sheet.
 
-### numpy.concatenate()
+#### numpy.concatenate()
 ```python
 import numpy as np
 
 feat = np.concatenate([feat_1,feat_2], axis=2) # dim of feat_1 and feat_2 should be same.
 ```
 
-### numpy.transpose()
+#### numpy.transpose()
 ```python
 
 feat = np.transpose(feat, (1, 0, 2)) # feat should be a 3-dim array
 ```
 
-### torch.cat()
+#### torch.cat()
 ```python
 import torch
 
 feat = torch.cat([feat_1,feat_2], axis=2) # dim of feat_1 and feat_2 should be same.
 ```
 
-### torch.transpose()
+#### torch.transpose()
 ```python
 import torch
 

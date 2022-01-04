@@ -2,7 +2,7 @@
 
 Model and training related cheat sheet.
 
-### 1. Torch model
+#### 1. Torch model
 ```python
 import torch
 import torch.nn as nn
@@ -19,7 +19,7 @@ class WzzModel(nn.Module):
         return output
 ```
 
-### 2. clip_grad_norm_()
+#### 2. clip_grad_norm_()
 ```python
 import torch.nn as nn
 
@@ -28,7 +28,7 @@ nn.utils.clip_grad_norm_(model.parameters(), 1)
 optimizer.step()
 ```
 
-### 3. torch.save
+#### 3. torch.save
 ```python
 import torch
 
@@ -36,7 +36,7 @@ model_path = "./model.pkl"
 torch.save(model.state_dict(), model_path)
 ```
 
-### 4. load_state_dic() & torch.load()
+#### 4. load_state_dic() & torch.load()
 ```python 
 import torch
 
@@ -45,7 +45,7 @@ params = torch.load(model_path, map_location='cpu')
 model.load_state_dict(params, strict=True)
 ```
 
-### 5. args
+#### 5. args
 ```python 
 import argparse
 

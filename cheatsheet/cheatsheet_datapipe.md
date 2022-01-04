@@ -2,7 +2,7 @@
 
 Data related cheat sheet.
 
-### Numpy
+#### Numpy
 ```python
 import numpy as np
 
@@ -15,7 +15,7 @@ with open("data.npy", "rb") as f:
     feat_2 = np.load(f)
 ```
 
-### Pickle
+#### Pickle
 ```python
 import pickle as pkl
 
@@ -30,7 +30,7 @@ with open(save_path,"rb") as f:
 train, test = data['train'], data['test'] # suppose data is a dict.
 ```
 
-### h5py
+#### h5py
 ```python
 import h5py
 
@@ -44,7 +44,7 @@ with h5py.File("data.hdf5","r") as f:
 
 ```
 
-### TensorDataset & DataLoader
+#### TensorDataset & DataLoader
 ```python
 # Dependency
 from torch.utils.data import DataLoader,TensorDataset
@@ -60,7 +60,7 @@ for input_ids, attention_mask, labels in trainingDataloader:
     break
 ```
 
-### train_test_split
+#### train_test_split
 ```python
 import numpy as np
 from sklearn.model_selection import train_test_split
