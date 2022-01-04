@@ -3,7 +3,6 @@
 Model and training related cheat sheet.
 
 ### 1. Torch model
-
 ```python
 import torch
 import torch.nn as nn
@@ -18,16 +17,9 @@ class WzzModel(nn.Module):
         output = self.input_layer(feat)
         output = self.output_layer(output)
         return output
-        
-config = dict(input_size=3, hidden_size=5, output_size=1)
-model = WzzModel(config)
-
-feat = torch.rand(10,3)
-output = model(feat)
 ```
 
 ### 2. clip_grad_norm_()
-
 ```python
 import torch.nn as nn
 
@@ -51,4 +43,16 @@ import torch
 model_path = "./model.pkl"
 params = torch.load(model_path, map_location='cpu')
 model.load_state_dict(params, strict=True)
+```
+
+### 5. args
+```python 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-lr', '--learning_rate', type=float, default=1e-5)
+parser.add_argument('--with-pretrained', dest="pretrained", action='store_true')
+parser.add_argument('--no-pretrained', dest="pretrained", action='store_false')
+parser.set_defaults(pretrained=False)
+args = parser.parse_args()
 ```
