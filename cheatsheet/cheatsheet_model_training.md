@@ -2,7 +2,19 @@
 
 Model and training related cheat sheet.
 
-#### 1. Torch model
+#### argparse
+```python 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-lr', '--learning_rate', type=float, default=1e-5)
+parser.add_argument('--with-pretrained', dest="pretrained", action='store_true')
+parser.add_argument('--no-pretrained', dest="pretrained", action='store_false')
+parser.set_defaults(pretrained=False)
+args = parser.parse_args()
+```
+
+#### Torch model
 ```python
 import torch
 import torch.nn as nn
@@ -19,7 +31,7 @@ class WzzModel(nn.Module):
         return output
 ```
 
-#### 2. clip_grad_norm_()
+#### clip_grad_norm_()
 ```python
 import torch.nn as nn
 
@@ -28,7 +40,7 @@ nn.utils.clip_grad_norm_(model.parameters(), 1)
 optimizer.step()
 ```
 
-#### 3. torch.save
+#### torch.save()
 ```python
 import torch
 
@@ -36,23 +48,11 @@ model_path = "./model.pkl"
 torch.save(model.state_dict(), model_path)
 ```
 
-#### 4. load_state_dic() & torch.load()
+#### load_state_dic() & torch.load()
 ```python 
 import torch
 
 model_path = "./model.pkl"
 params = torch.load(model_path, map_location='cpu')
 model.load_state_dict(params, strict=True)
-```
-
-#### 5. args
-```python 
-import argparse
-
-parser = argparse.ArgumentParser()
-parser.add_argument('-lr', '--learning_rate', type=float, default=1e-5)
-parser.add_argument('--with-pretrained', dest="pretrained", action='store_true')
-parser.add_argument('--no-pretrained', dest="pretrained", action='store_false')
-parser.set_defaults(pretrained=False)
-args = parser.parse_args()
 ```
