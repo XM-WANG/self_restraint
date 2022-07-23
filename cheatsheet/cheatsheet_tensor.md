@@ -15,6 +15,9 @@ feat = np.concatenate([feat_1,feat_2], axis=2) # dim of feat_1 and feat_2 should
 feat = np.transpose(feat, (1, 0, 2)) # feat should be a 3-dim array
 ```
 
+#### numpy broadcast
+http://scipy.github.io/old-wiki/pages/EricsBroadcastingDoc
+
 #### torch.cat()
 ```python
 import torch
