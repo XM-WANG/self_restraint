@@ -9,3 +9,11 @@ cat /proc/cpuinfo | grep 'model name' |uniq
 ```
 du -sh ./
 ```
+
+3. ln
+
+```
+ln -s src des
+ln -s -F src_folder/ des_folder
+unlink des
+```
