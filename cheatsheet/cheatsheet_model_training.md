@@ -14,6 +14,22 @@ parser.set_defaults(pretrained=False)
 args = parser.parse_args()
 ```
 
+#### GPU
+1. In command line
+    ```
+    CUDA_VISIBLE_DEVICES=1 python my_script.py
+    ```
+2. In python file
+    ```
+    import os
+    os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+    ```
+3. Use torch API
+    ```python
+    import torch
+    torch.cuda.set_device(3)
+    ```
+
 #### Torch model
 ```python
 import torch
