@@ -36,3 +36,8 @@ launch.json
     ]
 }
 ```
+
+### Update Conda
+```
+conda update -n base -c defaults conda --repodata-fn=repodata.json
+```
