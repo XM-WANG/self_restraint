@@ -5,6 +5,7 @@
 conda activate myenv
 conda install nb_conda_kernels
 python -m ipykernel install --user --name myenv --display-name "myenv"
+conda install -n myenv ipykernel --update-deps --force-reinstall
 ```
 
 #### Check jupyter kernel
