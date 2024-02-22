@@ -60,6 +60,12 @@ for input_ids, attention_mask, labels in trainingDataloader:
     break
 ```
 
+#### Pandas Display Setting
+```python
+pd.set_option('display.max_colwidth', 30)
+pd.set_option('display.width', 200)
+```
+
 #### train_test_split
 ```python
 import numpy as np
