@@ -42,3 +42,13 @@ launch.json
 ```
 conda update -n base -c defaults conda --repodata-fn=repodata.json
 ```
+
+#### Add Conda Terminal to VSCode
+```
+"terminal.integrated.profiles.windows": {
+    "Conda Prompt": {
+        "path": "cmd.exe",
+        "args": ["/K", "C:\\Users\\你的用户名\\miniconda3\\Scripts\\activate.bat"]
+    }
+}
+```
